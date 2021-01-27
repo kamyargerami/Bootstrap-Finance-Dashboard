@@ -24,6 +24,12 @@
     color: #007cff;
 }
 
+#sidenav .dropdown-toggle::after {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
 @media screen and (min-width: 1000px) {
     #content {
         margin-left: 250px !important;
