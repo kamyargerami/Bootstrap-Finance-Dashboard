@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="sidenav">
+<div id="sidenav">
     <div class="row mb-3">
         <div class="col-4">
             <img src="./assets/img/logo.png" alt="Logo" class="img-fluid ms-4">
@@ -27,10 +27,18 @@
         <i class="fa fa-home text-primary me-3"></i>
         Dashboard
     </a>
-    <a href="#">
-        <i class="fa fa-location-arrow text-primary me-3"></i>
-        Basic Ui Elements
-    </a>
+    <div class="dropdown">
+        <a class="dropdown-toggle" type="button" id="dropdownMenuButton"
+           data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-location-arrow text-primary me-3"></i>
+            Basic Ui Elements
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
     <a href="#">
         <i class="fa fa-user-friends text-primary me-3"></i>
         Icons
@@ -85,6 +93,31 @@
     <div class="p-5">
         <h2>Demo Content</h2>
     </div>
+
+    <div id="floating-menu">
+        <a href="">
+            <i class="fa fa-home mb-2"></i>
+        </a>
+
+        <hr>
+
+        <a href="">
+            <i class="fa fa-search mb-2"></i>
+        </a>
+
+        <hr>
+
+        <a href="">
+            <i class="fa fa-chart-bar"></i>
+        </a>
+    </div>
+
+    <!--    <footer class="bg-light text-center text-lg-start">-->
+    <!--        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1)">-->
+    <!--            © 2020 Copyright:-->
+    <!--            <a class="text-dark" href="https://mdbootstrap.com/">Finance Dashboard</a>-->
+    <!--        </div>-->
+    <!--    </footer>-->
 </div>
 
 
