@@ -1,3 +1,7 @@
+body {
+    background-color: #f2f2f2;
+}
+
 #sidenav {
     height: 100%;
     position: fixed;
@@ -11,9 +15,9 @@
 }
 
 #sidenav a {
-    padding: 8px 13px 13px 32px;
+    padding: 8px 13px 13px 28px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: #030f37;
     display: block;
     transition: 0.3s;
@@ -24,19 +28,32 @@
     color: #007cff;
 }
 
-#sidenav .dropdown-toggle::after {
+.dropdown-container {
+    display: none;
+    padding-left: 40px;
+}
+
+.dropdown-btn::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0d7";
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 25px;
+    top: 5px;
+    color: #030f37;
+}
+
+#content {
+    transition: 0.5s;
 }
 
 @media screen and (min-width: 1000px) {
     #content {
-        margin-left: 250px !important;
+        margin-left: 250px;
     }
 
     #sidenav {
-        left: 0 !important;
+        left: 0;
     }
 }
 
@@ -58,4 +75,64 @@
 
 #floating-menu a {
     color: #fff;
+}
+
+.side-icon {
+    color: #423a8e;
+}
+
+.btn-nav {
+    color: #909090;
+    background-color: #3f3f40;
+    border-radius: 50%;
+    padding: 10px 11px 5px 11px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: #a0a0a1 solid 1px;
+}
+
+.btn-nav:hover {
+    color: #d5d5d5;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.font-17 {
+    font-size: 17px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-19 {
+    font-size: 19px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-21 {
+    font-size: 21px;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+.font-23 {
+    font-size: 23px;
+}
+
+.font-24 {
+    font-size: 24px;
 }

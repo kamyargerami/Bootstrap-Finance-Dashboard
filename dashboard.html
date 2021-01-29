@@ -9,76 +9,66 @@
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/css/chart.min.css">
     <link rel="stylesheet" href="./assets/css/custom.css">
+    <!--    <link rel="stylesheet" href="./assets/css/light.css">-->
 </head>
 <body>
 
-<div id="sidenav">
-    <div class="row mb-3">
-        <div class="col-4">
-            <img src="./assets/img/logo.png" alt="Logo" class="img-fluid ms-4">
-        </div>
-        <div class="col-8 ps-4">
-            <p class="text-danger fw-bold mb-0 pt-2">The</p>
-            <p class="mb-0 fw-bold">Big M</p>
-        </div>
-    </div>
-    <a href="#">
-        <i class="fa fa-home text-primary me-3"></i>
-        Dashboard
-    </a>
-    <div class="dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenuButton"
-           data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-location-arrow text-primary me-3"></i>
-            Basic Ui Elements
-        </a>
-        <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-    </div>
-    <a href="#">
-        <i class="fa fa-user-friends text-primary me-3"></i>
-        Icons
-    </a>
-    <a href="#">
-        <i class="fa fa-list text-primary me-3"></i>
-        Forms
-    </a>
-    <a href="#">
-        <i class="fa fa-chart-bar text-primary me-3"></i>
-        Charts
-    </a>
-    <a href="#">
-        <i class="fa fa-table text-primary me-3"></i>
-        Tables
-    </a>
-
-    <a href="#">
-        <i class="fa fa-envelope-open-text text-primary me-3"></i>
-        Documentation
-    </a>
-</div>
-
 <div id="content">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
-        <div class="container-fluid">
+        <div class="container-fluid navbar-nav">
             <div class="row w-100">
-                <div class="col-3 col-lg-4">
-                    sdf
-                </div>
-                <div class="col-3 col-lg-5">
-                    sdfs
-                </div>
-                <div class="col-3 col-lg-3">
-                    sdfsd
-                </div>
-                <div class="col-3 d-lg-none">
-                    <button class="btn btn-dark" onclick="toggle_sidenav()">
+                <div class="col-lg-4 ps-4 pe-4">
+                    <button class="btn btn-nav" onclick="toggle_sidenav()">
                         <i class="fa fa-bars"></i>
                     </button>
+
+                    <button class="btn btn-nav ms-4">
+                        <i class="fa fa-bell"></i>
+                    </button>
+
+                    <button class="btn btn-nav ms-4">
+                        <i class="fa fa-envelope"></i>
+                    </button>
+                </div>
+                <div class="col-lg-5 ps-4 pe-4">
+
+                </div>
+                <div class="col-lg-3 ps-4 pe-4">
+                    <li class="nav-item dropdown d-inline-block">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-nav me-2">
+                                <i class="fa fa-globe"></i>
+                            </button>
+                            English
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown d-inline-block ms-4">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/img/avatar.png" class="img-fluid me-2 profile-img" width="40px">
+                            Henry Klein
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
                 </div>
             </div>
         </div>
@@ -86,7 +76,127 @@
 
 
     <div class="p-5">
-        <h2>Demo Content</h2>
+        <div class="row mb-3">
+            <div class="col-lg-3">
+                <h3>
+                    Hi, Welcome back!
+                </h3>
+            </div>
+            <div class="col-lg-3 mb-2">
+                Your web analytics dashboard template
+            </div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3">
+                <a href="" class="btn btn-light">
+                    <i class="fa fa-envelope me-2"></i>
+                    Email
+                </a>
+                <a href="" class="btn btn-light ms-3">
+                    <i class="fa fa-print me-2"></i>
+                    Print
+                </a>
+                <a href="" class="btn btn-info ms-3 text-white">
+                    Add User
+                </a>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-lg-3">
+                <div class="bg-warning p-4 text-white mb-3">
+                    <p class="mb-0 fw-bold">Sales</p>
+                    <p class="mb-0 font-24 fw-bold">
+                        $8,753.<span class="font-16">00</span>
+                    </p>
+                    <p class="mb-0 fw-bold">
+                        18.33% Since last month
+                    </p>
+                </div>
+
+                <div class="bg-danger p-4 text-white mb-3">
+                    <p class="mb-0 fw-bold">Margin</p>
+                    <p class="mb-0 font-24 fw-bold">
+                        $5,300.<span class="font-16">00</span>
+                    </p>
+                    <p class="mb-0 fw-bold">
+                        13.21% Since last month
+                    </p>
+                </div>
+
+                <div class="bg-primary p-4 text-white mb-3">
+                    <p class="mb-0 fw-bold">Orders</p>
+                    <p class="mb-0 font-24 fw-bold">
+                        $1,753.<span class="font-16">00</span>
+                    </p>
+                    <p class="mb-0 fw-bold">
+                        67.98% Since last month
+                    </p>
+                </div>
+
+                <div class="bg-info p-4 text-white mb-3">
+                    <p class="mb-0 fw-bold">Affiliate</p>
+                    <p class="mb-0 font-24 fw-bold">
+                        $2,368.<span class="font-16">00</span>
+                    </p>
+                    <p class="mb-0 fw-bold">
+                        20.52% Since last month
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="card p-4">
+                    <p class="font-24 fw-bold">
+                        Business Survey
+                    </p>
+                    <p>
+                        Show overview jan 2018 - Dec 2019
+                        <a href="">
+                            See Details
+                        </a>
+                    </p>
+                    <div class="card-body">
+                        <canvas id="myChart" height="110"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mb-3">
+            <div class="col-lg-8 mb-3">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3">Purchase History</h5>
+
+                        <p>
+                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
+                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
+                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
+                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus
+                            fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non
+                            sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo
+                            hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian
+                            quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3">Business Survay</h5>
+
+                        <p>
+                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
+                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
+                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
+                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="floating-menu">
@@ -107,17 +217,93 @@
         </a>
     </div>
 
-    <!--    <footer class="bg-light text-center text-lg-start">-->
-    <!--        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1)">-->
-    <!--            © 2020 Copyright:-->
-    <!--            <a class="text-dark" href="https://mdbootstrap.com/">Finance Dashboard</a>-->
-    <!--        </div>-->
-    <!--    </footer>-->
+    <footer class="bg-light font-12 text-center text-lg-start">
+        <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.1)">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">Finance Dashboard</a>
+        </div>
+    </footer>
+</div>
+
+<div id="sidenav">
+    <div class="row mb-3">
+        <div class="col-3">
+            <img src="./assets/img/logo.png" alt="Logo" class="img-fluid ms-4">
+        </div>
+        <div class="col-9 ps-4">
+            <p class="text-danger fw-bold mb-0">The</p>
+            <p class="mb-0 fw-bold">Big M</p>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-3">
+            <img src="./assets/img/avatar.png" class="img-fluid ms-4 profile-img">
+        </div>
+        <div class="col-9 ps-4">
+            <p class="fw-bold mb-0">Henry Klein</p>
+            <p class="mb-0">$8,573.00</p>
+        </div>
+    </div>
+
+    <a href="#">
+        <i class="fa fa-home side-icon me-3"></i>
+        Dashboard
+    </a>
+
+    <div class="dropdown">
+        <a class="dropdown-btn">
+            <i class="fa fa-location-arrow side-icon me-3"></i>
+            Basic Ui Elements
+        </a>
+        <div class="dropdown-container">
+            <a href="#">
+                <i class="fa fa-envelope side-icon me-2"></i>
+                Link 1
+            </a>
+            <a href="#">
+                <i class="fa fa-shopping-basket side-icon me-2"></i>
+                Link 2
+            </a>
+            <a href="#">
+                <i class="fa fa-video side-icon me-2"></i>
+                Link 3
+            </a>
+        </div>
+    </div>
+
+    <a href="#">
+        <i class="fa fa-user-friends side-icon me-3"></i>
+        Icons
+    </a>
+    <a href="#">
+        <i class="fa fa-list side-icon me-3"></i>
+        Forms
+    </a>
+    <a href="#">
+        <i class="fa fa-chart-bar side-icon me-3"></i>
+        Charts
+    </a>
+    <a href="#">
+        <i class="fa fa-table side-icon me-3"></i>
+        Tables
+    </a>
+
+    <p class="ms-4 mb-1 mt-3">Docs</p>
+
+    <a href="#">
+        <i class="fa fa-envelope-open-text side-icon me-3"></i>
+        Documentation
+    </a>
+
+    <a href="#" class="ms-4 mt-5 ps-0">Notification</a>
+    <a href="#" class="ms-4 ps-0">Sign Out</a>
 </div>
 
 
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/chart.min.js"></script>
 <script src="./assets/js/custom.js"></script>
 </body>
 </html>
