@@ -19,20 +19,30 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
         <div class="container-fluid navbar-nav">
             <div class="row w-100">
-                <div class="col-lg-4 ps-4 pe-4">
+                <div class="col-lg-5 ps-4 pe-4">
                     <button class="btn btn-nav" onclick="toggle_sidenav()">
                         <i class="fa fa-bars"></i>
                     </button>
 
                     <button class="btn btn-nav ms-4">
                         <i class="fa fa-bell"></i>
+                        <span class="badge bg-warning position-absolute nav-badge">4</span>
                     </button>
 
                     <button class="btn btn-nav ms-4">
                         <i class="fa fa-envelope"></i>
+                        <span class="badge bg-info position-absolute nav-badge">2</span>
                     </button>
+
+
+                    <div class="input-group nav-search ms-5">
+                        <input type="text" class="form-control search-input" placeholder="Search...">
+                        <span>
+                            <i class="fa fa-search pe-3 ps-2 pt-2 text-white"></i>
+                        </span>
+                    </div>
                 </div>
-                <div class="col-lg-5 ps-4 pe-4">
+                <div class="col-lg-4 ps-4 pe-4">
 
                 </div>
                 <div class="col-lg-3 ps-4 pe-4">
@@ -144,18 +154,115 @@
                 </div>
             </div>
             <div class="col-lg-9">
-                <div class="card p-4">
-                    <p class="font-24 fw-bold">
-                        Business Survey
-                    </p>
-                    <p>
-                        Show overview jan 2018 - Dec 2019
-                        <a href="">
-                            See Details
-                        </a>
-                    </p>
+                <div class="card">
                     <div class="card-body">
-                        <canvas id="myChart" height="110"></canvas>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p class="font-24 fw-bold mb-0">
+                                    Business Survey
+                                </p>
+                                <p class="mb-0">
+                                    Show overview jan 2018 - Dec 2019
+                                    <a href="" class="text-dark ms-4">
+                                        See Details
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <button class="btn btn-primary float-end">
+                                    <i class="fa fa-download"></i>
+                                    Download Report
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 p-3">
+                                <div class="border pe-4 ps-4 pt-3 pb-3">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <p class="font-14 fw-bold text-black-50 mb-0">
+                                                Today Earnings
+                                            </p>
+                                            <p class="font-22 fw-bold mb-0">
+                                                $5,300
+                                            </p>
+                                            <p class="font-14 text-success mb-0">
+                                                -130 avg sales
+                                            </p>
+                                        </div>
+                                        <div class="col-3 pt-3">
+                                            <i class="fa fa-chart-line text-primary fa-3x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-3">
+                                <div class="border pe-4 ps-4 pt-3 pb-3">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <p class="font-14 fw-bold text-black-50 mb-0">
+                                                Product Sold
+                                            </p>
+                                            <p class="font-22 fw-bold mb-0">
+                                                $9,100
+                                            </p>
+                                            <p class="font-14 text-danger mb-0">
+                                                -310 avg sales
+                                            </p>
+                                        </div>
+                                        <div class="col-3 pt-3">
+                                            <i class="fa fa-chart-line text-primary fa-3x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-3">
+                                <div class="border pe-4 ps-4 pt-3 pb-3">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <p class="font-14 fw-bold text-black-50 mb-0">
+                                                Today Orders
+                                            </p>
+                                            <p class="font-22 fw-bold mb-0">
+                                                $4,354
+                                            </p>
+                                            <p class="font-14 text-success mb-0">
+                                                -310 avg sales
+                                            </p>
+                                        </div>
+                                        <div class="col-3 pt-3">
+                                            <i class="fa fa-chart-line text-primary fa-3x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <canvas id="myChart" height="70"></canvas>
+
+                        <div class="row mt-4">
+                            <div class="col-8">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod
+                                    tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <p class="mb-0">
+                                    Sales Revenue
+                                </p>
+                                <p class="mb-0 font-22 fw-bold">
+                                    $2,45,500
+                                    <span class="text-danger fw-light font-14">
+                                        last 8 months
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
