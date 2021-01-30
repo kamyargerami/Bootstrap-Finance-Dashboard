@@ -451,8 +451,8 @@
 
             if (result != null && params.term != null) {
                 if (result.text.toLowerCase() == params.term.toLowerCase()) {
-                    if ($('#select2-found-text').length == 0) {
-                        $('.select2-results').append('<div class="bg-white p-1" id="select2-found-text"><hr class="mt-0">' +
+                    if ($('.select2-found-text').length == 0) {
+                        $('.select2-results').append('<div class="bg-white p-1 mb-1 select2-found-text"><hr class="mt-0">' +
                             '<img src="./assets/images/logo.png" alt="Logo" class="img-fluid me-2" width="30px">' +
                             '<div class="float-end">' +
                             '<p class="font-12 mb-0">message 1: this is a nice person</p>' +
@@ -460,7 +460,7 @@
                             '</div></div>');
                     }
                 } else {
-                    $('#select2-found-text').remove();
+                    $('.select2-found-text').remove();
                 }
             }
 
