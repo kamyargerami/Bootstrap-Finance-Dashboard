@@ -69,7 +69,7 @@
                     <li class="nav-item dropdown d-inline-block ms-4">
                         <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/avatar.png" class="img-fluid me-2 profile-img" width="40px">
+                            <img src="./assets/images/avatar.png" class="img-fluid me-2 profile-img" width="40px">
                             <span class="d-none d-sm-inline-block">Henry Klein</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -350,7 +350,7 @@
 <div id="sidenav">
     <div class="row mb-3">
         <div class="col-3">
-            <img src="./assets/img/logo.png" alt="Logo" class="img-fluid ms-4">
+            <img src="./assets/images/logo.png" alt="Logo" class="img-fluid ms-4">
         </div>
         <div class="col-9 ps-4">
             <p class="text-danger fw-bold mb-0">The</p>
@@ -360,7 +360,7 @@
 
     <div class="row mb-3">
         <div class="col-3">
-            <img src="./assets/img/avatar.png" class="img-fluid ms-4 profile-img">
+            <img src="./assets/images/avatar.png" class="img-fluid ms-4 profile-img">
         </div>
         <div class="col-9 ps-4">
             <p class="fw-bold mb-0">Henry Klein</p>
@@ -441,12 +441,31 @@
         placeholder: 'Select or Add',
         tags: true,
         insertTag: function (data, tag) {
-            tag.text = '<img src="./assets/img/logo.png" alt="Logo" class="img-fluid me-2" width="30px"><span>No Results Found</span><button class="btn btn-sm btn-primary float-end mb-2" onclick="task()">Add?</a>';
-            tag.fill = '#ffffff';
+            tag.text = '<img src="./assets/images/logo.png" alt="Logo" class="img-fluid me-2" width="30px">' +
+                '<span>No Results Found</span>' +
+                '<button class="btn btn-sm btn-primary float-end mb-2">Add?</a>';
             data.push(tag);
         },
-        language: {
-            result: 'sdfsd'
+        matcher: function (params, data) {
+            let result = $.fn.select2.defaults.defaults.matcher(params, data);
+
+            if (result != null && params.term != null) {
+                if (result.text.toLowerCase() == params.term.toLowerCase()) {
+                    if ($('#select2-found-text').length == 0) {
+                        $('.select2-results').append('<div class="bg-white p-1" id="select2-found-text"><hr class="mt-0">' +
+                            '<img src="./assets/images/logo.png" alt="Logo" class="img-fluid me-2" width="30px">' +
+                            '<div class="float-end">' +
+                            '<p class="font-12 mb-0">message 1: this is a nice person</p>' +
+                            '<p class="font-12 mb-0">message 2: this is a nice person</p>' +
+                            '</div></div>');
+                    }
+                } else {
+                    $('#select2-found-text').remove();
+                }
+            }
+
+
+            return result;
         },
         escapeMarkup: function (markup) {
             return markup;
