@@ -145,6 +145,11 @@ body {
     color: black;
 }
 
+.custom-text-nav {
+    background-color: deeppink;
+    color: white;
+    border-radius: 5px;
+}
 
 .font-12 {
     font-size: 12px;
