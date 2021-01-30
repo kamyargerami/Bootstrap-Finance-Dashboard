@@ -246,7 +246,7 @@
                         </div>
 
 
-                        <canvas id="myChart" height="70"></canvas>
+                        <canvas id="chart-canvas" height="70"></canvas>
 
                         <div class="row mt-4">
                             <div class="col-8">
@@ -281,7 +281,7 @@
                         <h5 class="mb-3">Purchase History</h5>
 
                         <p>
-                        <table id="table_id" class="display">
+                        <table class="display dataTable-table">
                             <thead>
                             <tr>
                                 <th>Column 1</th>
@@ -432,54 +432,6 @@
 <script src="./assets/js/select2.min.js"></script>
 <script src="./assets/js/data-tables.min.js"></script>
 <script src="./assets/js/custom.js"></script>
-
-<!--this script just uses when you need data tables or select2-->
-<script>
-    //////////////////////////////////////////////////
-    /////       For Loading select 2    //////////////
-    //////////////////////////////////////////////////
-
-    $('.js-data-example-ajax').select2({
-        width: '100%',
-        placeholder: 'Select or Add',
-        tags: true,
-        insertTag: function (data, tag) {
-            tag.text = '<img src="./assets/images/logo.png" alt="Logo" class="img-fluid me-2" width="30px">' +
-                '<span>No Results Found</span>' +
-                '<button class="btn btn-sm btn-primary float-end mb-2">Add?</a>';
-            data.push(tag);
-        },
-        matcher: function (params, data) {
-            let result = $.fn.select2.defaults.defaults.matcher(params, data);
-
-            if (result != null && params.term != null) {
-                if (result.text.toLowerCase() == params.term.toLowerCase()) {
-                    if ($('.select2-found-text').length == 0) {
-                        $('.select2-results').append('<div class="bg-white p-1 mb-1 select2-found-text"><hr class="mt-0">' +
-                            '<img src="./assets/images/logo.png" alt="Logo" class="img-fluid me-2" width="30px">' +
-                            '<div class="float-end">' +
-                            '<p class="font-12 mb-0">message 1: this is a nice person</p>' +
-                            '<p class="font-12 mb-0">message 2: this is a nice person</p>' +
-                            '</div></div>');
-                    }
-                } else {
-                    $('.select2-found-text').remove();
-                }
-            }
-
-
-            return result;
-        },
-        escapeMarkup: function (markup) {
-            return markup;
-        },
-    });
-
-    //////////////////////////////////////////////////
-    /////       For Loading Datatables    ////////////
-    //////////////////////////////////////////////////
-
-    $('#table_id').DataTable();
-</script>
+<script src="./assets/js/dashboard.js"></script>
 </body>
 </html>
