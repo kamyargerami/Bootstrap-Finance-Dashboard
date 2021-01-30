@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="./assets/css/chart.min.css">
+    <link rel="stylesheet" href="./assets/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/css/data-tables.min.css">
     <link rel="stylesheet" href="./assets/css/custom.css">
     <!--    <link rel="stylesheet" href="./assets/css/light.css">-->
 </head>
@@ -68,7 +70,7 @@
                         <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="./assets/img/avatar.png" class="img-fluid me-2 profile-img" width="40px">
-                            Henry Klein
+                            <span class="d-none d-sm-inline-block">Henry Klein</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -276,14 +278,28 @@
                         <h5 class="mb-3">Purchase History</h5>
 
                         <p>
-                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
-                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
-                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
-                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus
-                            fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non
-                            sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo
-                            hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian
-                            quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.
+                        <table id="table_id" class="display">
+                            <thead>
+                            <tr>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Row 1 Data 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Row 2 Data 2</td>
+                            </tr>
+                            <tr>
+                                <td>1245</td>
+                                <td>Row 1245</td>
+                            </tr>
+                            </tbody>
+                        </table>
                         </p>
                     </div>
                 </div>
@@ -294,12 +310,11 @@
                     <div class="card-body p-4">
                         <h5 class="mb-3">Business Survay</h5>
 
-                        <p>
-                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
-                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
-                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
-                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. .
-                        </p>
+                        <select class="js-data-example-ajax">
+                            <option value="1">USA</option>
+                            <option value="2">China</option>
+                            <option value="3">India</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -353,7 +368,7 @@
         </div>
     </div>
 
-    <a href="#">
+    <a href="#" class="this-page">
         <i class="fa fa-home side-icon me-3"></i>
         Dashboard
     </a>
@@ -411,6 +426,38 @@
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/jquery.min.js"></script>
 <script src="./assets/js/chart.min.js"></script>
+<script src="./assets/js/select2.min.js"></script>
+<script src="./assets/js/data-tables.min.js"></script>
 <script src="./assets/js/custom.js"></script>
+
+<!--this script just uses when you need data tables or select2-->
+<script>
+    //////////////////////////////////////////////////
+    /////       For Loading select 2    //////////////
+    //////////////////////////////////////////////////
+
+    $('.js-data-example-ajax').select2({
+        width: '100%',
+        placeholder: 'Select or Add',
+        tags: true,
+        insertTag: function (data, tag) {
+            tag.text = '<img src="./assets/img/logo.png" alt="Logo" class="img-fluid me-2" width="30px"><span>No Results Found</span><button class="btn btn-sm btn-primary float-end mb-2" onclick="task()">Add?</a>';
+            tag.fill = '#ffffff';
+            data.push(tag);
+        },
+        language: {
+            result: 'sdfsd'
+        },
+        escapeMarkup: function (markup) {
+            return markup;
+        },
+    });
+
+    //////////////////////////////////////////////////
+    /////       For Loading Datatables    ////////////
+    //////////////////////////////////////////////////
+
+    $('#table_id').DataTable();
+</script>
 </body>
 </html>

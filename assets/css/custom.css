@@ -29,7 +29,7 @@ body {
 }
 
 .dropdown-container {
-    display: none;
+    display: block;
     padding-left: 40px;
 }
 
@@ -41,6 +41,10 @@ body {
     right: 25px;
     top: 5px;
     color: #030f37;
+}
+
+.this-page {
+    color: #0d6efd !important;
 }
 
 #content {
@@ -131,6 +135,16 @@ body {
     border: none;
     box-shadow: none;
 }
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable:last-child {
+    background-color: white;
+    color: black;
+}
+
 
 .font-12 {
     font-size: 12px;
