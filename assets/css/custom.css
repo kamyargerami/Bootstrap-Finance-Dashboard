@@ -64,7 +64,7 @@ body {
 @media screen and (max-width: 1000px) {
     #sidenav {
         left: -250px;
-        top: 54px;
+        top: 57px;
     }
 
     #content {
@@ -116,7 +116,7 @@ body {
     background-color: #4f5050;
     border-radius: 20px;
     color: #3f3f40;
-    width: 40%;
+    width: 50%;
     display: inline-flex;
 }
 

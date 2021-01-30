@@ -6,3 +6,25 @@ body {
     background: #ffffff;
     border-right: #dedede solid 1px;
 }
+
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: #cbcbcb solid 1px;
+}
+
+.btn-nav {
+    background-color: #f0f0f0;
+    color: #404040;
+}
+
+.search-input {
+    background-color: #f0f0f0;
+}
+
+.search-input::placeholder {
+    color: black;
+}
+
+.nav-search {
+    background-color: #c2c2c2;
+}
