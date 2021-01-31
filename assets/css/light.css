@@ -12,6 +12,10 @@ body {
     border-bottom: #cbcbcb solid 1px;
 }
 
+.nav-link, .nav-link:focus {
+    color: #0c0c0c !important;
+}
+
 .btn-nav {
     background-color: #f0f0f0;
     color: #404040;
@@ -28,3 +32,17 @@ body {
 .nav-search {
     background-color: #c2c2c2;
 }
+
+#floating-menu {
+    background-color: #c2c2c2;
+}
+
+#sidenav a {
+    color: #181818;
+    font-weight: 500;
+}
+
+.side-icon {
+    color: #181818;
+}
+

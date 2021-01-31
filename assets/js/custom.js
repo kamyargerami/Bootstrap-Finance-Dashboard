@@ -1,10 +1,10 @@
 function toggle_sidenav() {
     if ($('#sidenav').css('left') == '-250px') {
         $('#sidenav').css('left', '0');
-        $('#content').css('margin-left', '250px');
+        $('.can_have_sidenav').css('margin-left', '250px');
     } else {
         $('#sidenav').css('left', '-250px');
-        $('#content').css('margin-left', '0');
+        $('.can_have_sidenav').css('margin-left', '0');
     }
 }
 

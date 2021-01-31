@@ -1,0 +1,29 @@
+body {
+    background: linear-gradient(180deg, rgba(227, 229, 241, 1) 0%, rgba(182, 206, 230, 1) 100%);
+    background-size: contain;
+    min-height: 80vh;
+}
+
+#login-div {
+    margin-top: 20vh;
+}
+
+.btn-google, .btn-google:hover {
+    background-color: #DB4437;
+    color: white;
+}
+
+.btn-facebook, .btn-facebook:hover {
+    background-color: #4267B2;
+    color: white;
+}
+
+.btn-twitter, .btn-twitter:hover {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.btn-other, .btn-other:hover {
+    background-color: #e8e8e8;
+    color: #656565;
+}

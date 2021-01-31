@@ -1,6 +1,9 @@
 body {
     background-color: #f2f2f2;
+    min-height: 97vh;
 }
+
+/************ sidenav *********/
 
 #sidenav {
     height: 100%;
@@ -12,6 +15,8 @@ body {
     transition: 0.5s;
     padding-top: 30px;
     width: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #sidenav a {
@@ -47,9 +52,28 @@ body {
     color: #0d6efd !important;
 }
 
-#content {
+.side-icon {
+    color: #423a8e;
+}
+
+.custom-text-nav {
+    background-color: deeppink;
+    color: white;
+    border-radius: 5px;
+}
+
+.can_have_sidenav {
+    margin-left: 250px;
     transition: 0.5s;
 }
+
+/************ content *********/
+
+#content {
+    min-height: 97vh;
+}
+
+/************ resoinsive *********/
 
 @media screen and (min-width: 1000px) {
     #content {
@@ -67,10 +91,34 @@ body {
         top: 57px;
     }
 
-    #content {
+    .can_have_sidenav {
         margin-left: 0 !important;
     }
+
+    .mobile-nav-2 {
+        position: absolute;
+        left: 25%;
+    }
+
+    .mobile-nav-3 {
+        position: absolute;
+        right: 25%;
+    }
+
+    .mobile-nav-4 {
+        position: absolute;
+        right: 1.5rem;
+    }
 }
+
+/************ select 2 *********/
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable:last-child {
+    background-color: white;
+    color: black;
+}
+
+/************ floating menu *********/
 
 #floating-menu {
     position: fixed;
@@ -85,9 +133,7 @@ body {
     color: #fff;
 }
 
-.side-icon {
-    color: #423a8e;
-}
+/************ top nav *********/
 
 .btn-nav {
     color: #909090;
@@ -116,8 +162,9 @@ body {
     background-color: #4f5050;
     border-radius: 20px;
     color: #3f3f40;
-    width: 50%;
+    width: 60%;
     display: inline-flex;
+    margin-left: 1vw;
 }
 
 .search-input {
@@ -140,16 +187,13 @@ body {
     position: absolute;
 }
 
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable:last-child {
-    background-color: white;
-    color: black;
+/************ footer *********/
+
+footer {
+    background-color: rgba(0, 0, 0, 0.1)
 }
 
-.custom-text-nav {
-    background-color: deeppink;
-    color: white;
-    border-radius: 5px;
-}
+/************ fonts *********/
 
 .font-12 {
     font-size: 12px;
