@@ -61,6 +61,8 @@ $('.dataTable-table').DataTable({
 }).on('key-focus', function (e, datatable, cell) {
     $(".focus > select").select2('open');
     $(".focus > input").focus();
+}).on('key-blur', function (e, datatable, cell) {
+    $(".select2-input").select2('close');
 });
 
 
