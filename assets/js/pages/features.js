@@ -57,7 +57,10 @@ function close_select2() {
 
 $('.dataTable-table').DataTable({
     responsive: true,
-    keys: true
+    keys: true,
+}).on('key-focus', function (e, datatable, cell) {
+    $(".focus > select").select2('open');
+    $(".focus > input").focus();
 });
 
 

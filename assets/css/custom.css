@@ -232,8 +232,10 @@ footer {
     font-size: 24px;
 }
 
+/************ keytables *********/
+
 table.dataTable tbody th.focus, table.dataTable tbody td.focus {
-    box-shadow: inset 0 0 1px 2px #3366ff
+    box-shadow: inset 0 0 1px 2px #3f42ff
 }
 
 div.dtk-focus-alt table.dataTable tbody th.focus, div.dtk-focus-alt table.dataTable tbody td.focus {
