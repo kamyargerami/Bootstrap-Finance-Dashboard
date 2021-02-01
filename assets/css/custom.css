@@ -56,12 +56,6 @@ body {
     color: #423a8e;
 }
 
-.custom-text-nav {
-    background-color: deeppink;
-    color: white;
-    border-radius: 5px;
-}
-
 .can_have_sidenav {
     margin-left: 250px;
     transition: 0.5s;
