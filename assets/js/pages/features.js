@@ -1,4 +1,17 @@
 //////////////////////////////////////////////////
+/////       For Loading Datatables    ////////////
+//////////////////////////////////////////////////
+
+var table = $('.dataTable-table').DataTable({
+    responsive: true,
+    keys: true,
+}).on('key-focus', function () {
+    $('.focus > select').select2('open');
+    $('.focus > input').focus();
+});
+
+
+//////////////////////////////////////////////////
 /////       For Loading select 2    //////////////
 //////////////////////////////////////////////////
 
@@ -43,6 +56,12 @@ $('.select2-input').select2({
     escapeMarkup: function (markup) {
         return markup;
     },
+}).on('select2:open', function () {
+    table.keys.disable();
+}).on('select2:closing', function () {
+    $('.select2-found-text').remove();
+    $('.select2-not-found-text').remove();
+    table.keys.enable();
 });
 
 function close_select2() {
@@ -50,21 +69,6 @@ function close_select2() {
     select2_element.append(newOption).trigger('change');
     select2_element.select2('close');
 }
-
-//////////////////////////////////////////////////
-/////       For Loading Datatables    ////////////
-//////////////////////////////////////////////////
-
-$('.dataTable-table').DataTable({
-    responsive: true,
-    keys: true,
-}).on('key-focus', function (e, datatable, cell) {
-    $(".focus > select").select2('open');
-    $(".focus > input").focus();
-}).on('key-blur', function (e, datatable, cell) {
-    $(".select2-input").select2('close');
-});
-
 
 //////////////////////////////////////////////////
 /////             Date picker         ////////////
