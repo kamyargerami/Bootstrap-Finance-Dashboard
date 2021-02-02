@@ -21,6 +21,7 @@ $(document).on('keypress', '.editable', function (event) {
         let value = $(this).val();
         $('.focus').html(value);
         table.cell($('.focus')).data(value)
+        table.keys.move('right');
     }
 }).on('blur', '.editable', function () {
     let cell = $(this).parent('td');
@@ -75,11 +76,13 @@ $('.select2-input').select2({
         return markup;
     },
 }).on('select2:open', function () {
+    table.cell($(this).parent('td')).focus();
     table.keys.disable();
 }).on('select2:closing', function () {
     $('.select2-found-text').remove();
     $('.select2-not-found-text').remove();
     table.keys.enable();
+    table.keys.move('right');
 });
 
 function close_select2() {
