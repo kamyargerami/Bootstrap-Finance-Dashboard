@@ -82,6 +82,7 @@ $('.select2-input').select2({
     $('.select2-found-text').remove();
     $('.select2-not-found-text').remove();
     table.keys.enable();
+    $(".select2-input").select2("destroy").select2();
     table.keys.move('right');
 });
 
