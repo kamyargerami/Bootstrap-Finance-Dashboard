@@ -1,3 +1,4 @@
+
 //////////////////////////////////////////////////
 /////       For Loading Datatables    ////////////
 //////////////////////////////////////////////////
@@ -8,8 +9,25 @@ var table = $('.dataTable-table').DataTable({
 }).on('key-focus', function () {
     $('.focus > select').select2('open');
     $('.focus > input').focus();
+
+    if ($('.focus > select').length == 0 && $('.focus > input').length == 0) {
+        $('.focus').html('<input class="editable" type="text" value="' + $('.focus').text() + '">');
+        $('.editable').focus();
+    }
 });
 
+$(document).on('keypress', '.editable', function (event) {
+    if (event.keyCode == 13) {
+        let value = $(this).val();
+        $('.focus').html(value);
+        table.cell($('.focus')).data(value)
+    }
+}).on('blur', '.editable', function () {
+    let cell = $(this).parent('td');
+    let value = $(this).val();
+    $(cell).html(value);
+    table.cell(cell).data(value)
+});
 
 //////////////////////////////////////////////////
 /////       For Loading select 2    //////////////
