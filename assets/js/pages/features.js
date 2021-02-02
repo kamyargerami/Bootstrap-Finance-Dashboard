@@ -34,7 +34,7 @@ $(document).on('keypress', '.editable', function (event) {
 /////       For Loading select 2    //////////////
 //////////////////////////////////////////////////
 
-$('.select2-input').select2({
+var select_options = {
     width: '100%',
     placeholder: 'Select or Add',
     tags: true,
@@ -75,14 +75,16 @@ $('.select2-input').select2({
     escapeMarkup: function (markup) {
         return markup;
     },
-}).on('select2:open', function () {
+};
+
+$('.select2-input').select2(select_options).on('select2:open', function () {
     table.cell($(this).parent('td')).focus();
     table.keys.disable();
 }).on('select2:closing', function () {
     $('.select2-found-text').remove();
     $('.select2-not-found-text').remove();
     table.keys.enable();
-    $(".select2-input").select2("destroy").select2();
+    $(".select2-input").select2("destroy").select2(select_options);
     table.keys.move('right');
 });
 
