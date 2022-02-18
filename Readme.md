@@ -1,4 +1,4 @@
-# Bootstrap 5 Financial Admin panel
+# Bootstrap 5 Financial Dashboard
 
 This is a Responsive boilerplate for the investment platform.
 
